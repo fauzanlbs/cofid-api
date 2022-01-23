@@ -66,6 +66,9 @@
     },
     "red_zone": {
       "type": "boolean"
+    },
+    "non_honest": {
+      "type": "boolean"
     }
   }
 }

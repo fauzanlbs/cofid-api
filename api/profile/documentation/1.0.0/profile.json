@@ -697,6 +697,9 @@
           "red_zone": {
             "type": "boolean"
           },
+          "non_honest": {
+            "type": "boolean"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -747,6 +750,9 @@
             "type": "boolean"
           },
           "red_zone": {
+            "type": "boolean"
+          },
+          "non_honest": {
             "type": "boolean"
           },
           "published_at": {
