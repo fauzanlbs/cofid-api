@@ -57,6 +57,15 @@
     },
     "consequence": {
       "type": "integer"
+    },
+    "non_masker": {
+      "type": "boolean"
+    },
+    "non_masker_social": {
+      "type": "boolean"
+    },
+    "red_zone": {
+      "type": "boolean"
     }
   }
 }

@@ -688,6 +688,15 @@
           "consequence": {
             "type": "integer"
           },
+          "non_masker": {
+            "type": "boolean"
+          },
+          "non_masker_social": {
+            "type": "boolean"
+          },
+          "red_zone": {
+            "type": "boolean"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -730,6 +739,15 @@
           },
           "consequence": {
             "type": "integer"
+          },
+          "non_masker": {
+            "type": "boolean"
+          },
+          "non_masker_social": {
+            "type": "boolean"
+          },
+          "red_zone": {
+            "type": "boolean"
           },
           "published_at": {
             "type": "string",
