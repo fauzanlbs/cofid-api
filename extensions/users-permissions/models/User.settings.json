@@ -58,6 +58,30 @@
       "via": "users",
       "plugin": "users-permissions",
       "configurable": false
+    },
+    "phone": {
+      "type": "biginteger"
+    },
+    "occupation": {
+      "type": "text"
+    },
+    "city": {
+      "type": "string"
+    },
+    "address": {
+      "type": "text"
+    },
+    "avatar": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }
