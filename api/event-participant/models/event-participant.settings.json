@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "event_participants",
   "info": {
-    "name": "Event Participant"
+    "name": "Event Participant",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -17,6 +18,9 @@
     "users_permissions_user": {
       "plugin": "users-permissions",
       "model": "user"
+    },
+    "status": {
+      "type": "string"
     }
   }
 }

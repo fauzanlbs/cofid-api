@@ -672,6 +672,18 @@
                   "type": "string"
                 }
               },
+              "vaccine_status": {
+                "type": "string"
+              },
+              "risk_level": {
+                "type": "string"
+              },
+              "total_score": {
+                "type": "integer"
+              },
+              "next_test_date": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -679,6 +691,9 @@
                 "type": "string"
               }
             }
+          },
+          "status": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -692,6 +707,9 @@
             "type": "string"
           },
           "users_permissions_user": {
+            "type": "string"
+          },
+          "status": {
             "type": "string"
           },
           "published_at": {

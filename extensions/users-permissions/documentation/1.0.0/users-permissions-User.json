@@ -1332,6 +1332,19 @@
                 }
               }
             }
+          },
+          "vaccine_status": {
+            "type": "string"
+          },
+          "risk_level": {
+            "type": "string"
+          },
+          "total_score": {
+            "type": "integer"
+          },
+          "next_test_date": {
+            "type": "string",
+            "format": "date"
           }
         }
       },
@@ -1385,6 +1398,19 @@
           },
           "address": {
             "type": "string"
+          },
+          "vaccine_status": {
+            "type": "string"
+          },
+          "risk_level": {
+            "type": "string"
+          },
+          "total_score": {
+            "type": "integer"
+          },
+          "next_test_date": {
+            "type": "string",
+            "format": "date"
           },
           "created_by": {
             "type": "string"

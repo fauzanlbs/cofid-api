@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/05/2022 5:48:14 PM"
+    "x-generation-date": "02/13/2022 2:44:09 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -9889,6 +9889,18 @@
                   "type": "string"
                 }
               },
+              "vaccine_status": {
+                "type": "string"
+              },
+              "risk_level": {
+                "type": "string"
+              },
+              "total_score": {
+                "type": "integer"
+              },
+              "next_test_date": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -9896,6 +9908,9 @@
                 "type": "string"
               }
             }
+          },
+          "status": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -9909,6 +9924,9 @@
             "type": "string"
           },
           "users_permissions_user": {
+            "type": "string"
+          },
+          "status": {
             "type": "string"
           },
           "published_at": {
@@ -10019,6 +10037,18 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "vaccine_status": {
+                "type": "string"
+              },
+              "risk_level": {
+                "type": "string"
+              },
+              "total_score": {
+                "type": "integer"
+              },
+              "next_test_date": {
+                "type": "string"
               },
               "created_by": {
                 "type": "string"
@@ -10409,6 +10439,18 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "vaccine_status": {
+                "type": "string"
+              },
+              "risk_level": {
+                "type": "string"
+              },
+              "total_score": {
+                "type": "integer"
+              },
+              "next_test_date": {
+                "type": "string"
               },
               "created_by": {
                 "type": "string"
@@ -10847,6 +10889,18 @@
                   "type": "string"
                 }
               },
+              "vaccine_status": {
+                "type": "string"
+              },
+              "risk_level": {
+                "type": "string"
+              },
+              "total_score": {
+                "type": "integer"
+              },
+              "next_test_date": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -11120,6 +11174,18 @@
                   "type": "string"
                 }
               },
+              "vaccine_status": {
+                "type": "string"
+              },
+              "risk_level": {
+                "type": "string"
+              },
+              "total_score": {
+                "type": "integer"
+              },
+              "next_test_date": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -11349,6 +11415,18 @@
                     "type": "string"
                   }
                 },
+                "vaccine_status": {
+                  "type": "string"
+                },
+                "risk_level": {
+                  "type": "string"
+                },
+                "total_score": {
+                  "type": "integer"
+                },
+                "next_test_date": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -11543,6 +11621,19 @@
                 }
               }
             }
+          },
+          "vaccine_status": {
+            "type": "string"
+          },
+          "risk_level": {
+            "type": "string"
+          },
+          "total_score": {
+            "type": "integer"
+          },
+          "next_test_date": {
+            "type": "string",
+            "format": "date"
           }
         }
       },
@@ -11596,6 +11687,19 @@
           },
           "address": {
             "type": "string"
+          },
+          "vaccine_status": {
+            "type": "string"
+          },
+          "risk_level": {
+            "type": "string"
+          },
+          "total_score": {
+            "type": "integer"
+          },
+          "next_test_date": {
+            "type": "string",
+            "format": "date"
           },
           "created_by": {
             "type": "string"

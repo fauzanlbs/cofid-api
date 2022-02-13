@@ -82,6 +82,18 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "vaccine_status": {
+      "type": "string"
+    },
+    "risk_level": {
+      "type": "string"
+    },
+    "total_score": {
+      "type": "integer"
+    },
+    "next_test_date": {
+      "type": "date"
     }
   }
 }

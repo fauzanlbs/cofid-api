@@ -577,6 +577,18 @@
                   "type": "string"
                 }
               },
+              "vaccine_status": {
+                "type": "string"
+              },
+              "risk_level": {
+                "type": "string"
+              },
+              "total_score": {
+                "type": "integer"
+              },
+              "next_test_date": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
