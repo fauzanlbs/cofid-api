@@ -21,6 +21,9 @@
     },
     "status": {
       "type": "string"
+    },
+    "is_invite": {
+      "type": "boolean"
     }
   }
 }

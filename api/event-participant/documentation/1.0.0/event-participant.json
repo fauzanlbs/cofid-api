@@ -695,6 +695,9 @@
           "status": {
             "type": "string"
           },
+          "is_invite": {
+            "type": "boolean"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -711,6 +714,9 @@
           },
           "status": {
             "type": "string"
+          },
+          "is_invite": {
+            "type": "boolean"
           },
           "published_at": {
             "type": "string",
