@@ -606,6 +606,12 @@
               "status": {
                 "type": "boolean"
               },
+              "event_participants": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "published_at": {
                 "type": "string"
               },

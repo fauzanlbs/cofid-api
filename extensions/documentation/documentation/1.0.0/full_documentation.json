@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/20/2022 4:14:32 PM"
+    "x-generation-date": "03/03/2022 10:21:18 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -9823,6 +9823,12 @@
               "status": {
                 "type": "boolean"
               },
+              "event_participants": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "published_at": {
                 "type": "string"
               },
@@ -10210,6 +10216,40 @@
           "status": {
             "type": "boolean"
           },
+          "event_participants": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "event": {
+                  "type": "string"
+                },
+                "users_permissions_user": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "string"
+                },
+                "is_invite": {
+                  "type": "boolean"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -10280,6 +10320,12 @@
           },
           "status": {
             "type": "boolean"
+          },
+          "event_participants": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "published_at": {
             "type": "string",
