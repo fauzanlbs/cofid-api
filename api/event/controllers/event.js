@@ -12,7 +12,7 @@ module.exports = {
     if (ctx.query._q) {
       entities = await strapi.services.event.search(ctx.query);
     } else {
-      entities = await strapi.services.event.find(ctx.query, ['event_participants']);
+      entities = await strapi.services.event.find(ctx.query, ['image']);
     }
 
     return entities.map(entity => sanitizeEntity(entity, { model: strapi.models.event }));
