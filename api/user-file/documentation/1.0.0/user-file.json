@@ -602,6 +602,9 @@
               "next_test_date": {
                 "type": "string"
               },
+              "image": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
