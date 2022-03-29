@@ -16,7 +16,7 @@ module.exports = {
         {
           path: 'event',
           populate: {
-            path: 'users_permissions_user',
+            path: 'event.users_permissions_user',
           },
         },
       ]);
