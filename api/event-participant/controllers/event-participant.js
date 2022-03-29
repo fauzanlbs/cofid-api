@@ -12,14 +12,8 @@ module.exports = {
     if (ctx.query._q) {
       entities = await strapi.services.eventParticipant.search(ctx.query);
     } else {
-      entities = await strapi.services.eventParticipant.find(ctx.query, [
-        {
-          path: 'event',
-          populate: {
-            path: 'users_permissions_user',
-          },
-        },
-      ]);
+      let populate = ['event', 'event.users_permissions_user']
+      entities = await strapi.services.eventParticipant.find(ctx.query, populate);
     }
 
     return entities.map(entity => sanitizeEntity(entity, { model: strapi.models.eventParticipant }));
