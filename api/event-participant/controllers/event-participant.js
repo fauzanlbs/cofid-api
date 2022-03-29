@@ -13,8 +13,12 @@ module.exports = {
       entities = await strapi.services.event-participant.search(ctx.query);
     } else {
       entities = await strapi.services.event-participant.find(ctx.query, [
-        'event', 
-        'event.users_permissions_user',
+        {
+          path: 'event',
+          populate: {
+            path: 'users_permissions_user',
+          },
+        },
       ]);
     }
 
