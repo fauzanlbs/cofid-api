@@ -1,3 +1,5 @@
 module.exports = ({ env }) => ({
-  url: env('https://cofit-id.herokuapp.com'),
+  host: env('HOST', '0.0.0.0'),
+  port: env.int('PORT', 1337),
+  url: env('PUBLIC_URL', 'https://cofit-id.herokuapp.com'),
 });
