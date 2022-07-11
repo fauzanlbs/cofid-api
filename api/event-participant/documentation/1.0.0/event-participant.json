@@ -535,6 +535,90 @@
           "id": {
             "type": "string"
           },
+          "users_permissions_user": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmationToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "phone": {
+                "type": "integer"
+              },
+              "occupation": {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "address": {
+                "type": "string"
+              },
+              "avatar": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "vaccine_status": {
+                "type": "string"
+              },
+              "risk_level": {
+                "type": "string"
+              },
+              "total_score": {
+                "type": "integer"
+              },
+              "next_test_date": {
+                "type": "string"
+              },
+              "image": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "status": {
+            "type": "string"
+          },
+          "is_invite": {
+            "type": "boolean"
+          },
           "event": {
             "required": [
               "id"
@@ -623,90 +707,6 @@
               }
             }
           },
-          "users_permissions_user": {
-            "required": [
-              "id",
-              "username",
-              "email"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmationToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "phone": {
-                "type": "integer"
-              },
-              "occupation": {
-                "type": "string"
-              },
-              "city": {
-                "type": "string"
-              },
-              "address": {
-                "type": "string"
-              },
-              "avatar": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "vaccine_status": {
-                "type": "string"
-              },
-              "risk_level": {
-                "type": "string"
-              },
-              "total_score": {
-                "type": "integer"
-              },
-              "next_test_date": {
-                "type": "string"
-              },
-              "image": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "status": {
-            "type": "string"
-          },
-          "is_invite": {
-            "type": "boolean"
-          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -715,9 +715,6 @@
       },
       "NewEvent-participant": {
         "properties": {
-          "event": {
-            "type": "string"
-          },
           "users_permissions_user": {
             "type": "string"
           },
@@ -726,6 +723,9 @@
           },
           "is_invite": {
             "type": "boolean"
+          },
+          "event": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

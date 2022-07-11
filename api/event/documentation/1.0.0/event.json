@@ -756,9 +756,6 @@
                 "id": {
                   "type": "string"
                 },
-                "event": {
-                  "type": "string"
-                },
                 "users_permissions_user": {
                   "type": "string"
                 },
@@ -767,6 +764,9 @@
                 },
                 "is_invite": {
                   "type": "boolean"
+                },
+                "event": {
+                  "type": "string"
                 },
                 "published_at": {
                   "type": "string"

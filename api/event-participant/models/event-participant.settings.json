@@ -12,9 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "event": {
-      "model": "event"
-    },
     "users_permissions_user": {
       "plugin": "users-permissions",
       "model": "user"
@@ -24,6 +21,10 @@
     },
     "is_invite": {
       "type": "boolean"
+    },
+    "event": {
+      "via": "event_participants",
+      "model": "event"
     }
   }
 }

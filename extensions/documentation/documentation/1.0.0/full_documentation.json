@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "03/21/2022 10:19:45 PM"
+    "x-generation-date": "07/11/2022 6:54:29 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3595,6 +3595,74 @@
                 "schema": {
                   "type": "integer",
                   "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Profile"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/profiles/calculaterisk/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -9752,6 +9820,90 @@
           "id": {
             "type": "string"
           },
+          "users_permissions_user": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmationToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "phone": {
+                "type": "integer"
+              },
+              "occupation": {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "address": {
+                "type": "string"
+              },
+              "avatar": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "vaccine_status": {
+                "type": "string"
+              },
+              "risk_level": {
+                "type": "string"
+              },
+              "total_score": {
+                "type": "integer"
+              },
+              "next_test_date": {
+                "type": "string"
+              },
+              "image": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "status": {
+            "type": "string"
+          },
+          "is_invite": {
+            "type": "boolean"
+          },
           "event": {
             "required": [
               "id"
@@ -9840,90 +9992,6 @@
               }
             }
           },
-          "users_permissions_user": {
-            "required": [
-              "id",
-              "username",
-              "email"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmationToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "phone": {
-                "type": "integer"
-              },
-              "occupation": {
-                "type": "string"
-              },
-              "city": {
-                "type": "string"
-              },
-              "address": {
-                "type": "string"
-              },
-              "avatar": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "vaccine_status": {
-                "type": "string"
-              },
-              "risk_level": {
-                "type": "string"
-              },
-              "total_score": {
-                "type": "integer"
-              },
-              "next_test_date": {
-                "type": "string"
-              },
-              "image": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "status": {
-            "type": "string"
-          },
-          "is_invite": {
-            "type": "boolean"
-          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -9932,9 +10000,6 @@
       },
       "NewEvent-participant": {
         "properties": {
-          "event": {
-            "type": "string"
-          },
           "users_permissions_user": {
             "type": "string"
           },
@@ -9943,6 +10008,9 @@
           },
           "is_invite": {
             "type": "boolean"
+          },
+          "event": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -10232,9 +10300,6 @@
                 "id": {
                   "type": "string"
                 },
-                "event": {
-                  "type": "string"
-                },
                 "users_permissions_user": {
                   "type": "string"
                 },
@@ -10243,6 +10308,9 @@
                 },
                 "is_invite": {
                   "type": "boolean"
+                },
+                "event": {
+                  "type": "string"
                 },
                 "published_at": {
                   "type": "string"

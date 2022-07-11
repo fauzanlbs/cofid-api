@@ -86,7 +86,8 @@
       "type": "boolean"
     },
     "event_participants": {
-      "collection": "event-participant"
+      "collection": "event-participant",
+      "via": "event"
     }
   }
 }

@@ -47,6 +47,15 @@
       "config": {
         "policies": []
       }
+    },
+
+    {
+      "method": "GET",
+      "path": "/profiles/calculaterisk/:id",
+      "handler": "profile.calculateRisk",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }
