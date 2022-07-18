@@ -750,6 +750,9 @@
               "image": {
                 "type": "string"
               },
+              "profile": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -800,6 +803,87 @@
           },
           "non_honest": {
             "type": "boolean"
+          },
+          "user": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmationToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "phone": {
+                "type": "integer"
+              },
+              "occupation": {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "address": {
+                "type": "string"
+              },
+              "avatar": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "vaccine_status": {
+                "type": "string"
+              },
+              "risk_level": {
+                "type": "string"
+              },
+              "total_score": {
+                "type": "integer"
+              },
+              "next_test_date": {
+                "type": "string"
+              },
+              "image": {
+                "type": "string"
+              },
+              "profile": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           },
           "published_at": {
             "type": "string",
@@ -855,6 +939,9 @@
           },
           "non_honest": {
             "type": "boolean"
+          },
+          "user": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

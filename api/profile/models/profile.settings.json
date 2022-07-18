@@ -69,6 +69,11 @@
     },
     "non_honest": {
       "type": "boolean"
+    },
+    "user": {
+      "via": "profile",
+      "plugin": "users-permissions",
+      "model": "user"
     }
   }
 }

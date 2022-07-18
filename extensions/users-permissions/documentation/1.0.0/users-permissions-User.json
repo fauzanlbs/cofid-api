@@ -1412,6 +1412,76 @@
                 "type": "string"
               }
             }
+          },
+          "profile": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "profile_picture": {
+                "type": "string"
+              },
+              "phone": {
+                "type": "integer"
+              },
+              "current_occupancy": {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "address": {
+                "type": "string"
+              },
+              "vaccine_status": {
+                "type": "string"
+              },
+              "pcr_date": {
+                "type": "string"
+              },
+              "swab_date": {
+                "type": "string"
+              },
+              "users_permissions_user": {
+                "type": "string"
+              },
+              "risk_level": {
+                "type": "string"
+              },
+              "total_score": {
+                "type": "integer"
+              },
+              "consequence": {
+                "type": "integer"
+              },
+              "non_masker": {
+                "type": "boolean"
+              },
+              "non_masker_social": {
+                "type": "boolean"
+              },
+              "red_zone": {
+                "type": "boolean"
+              },
+              "non_honest": {
+                "type": "boolean"
+              },
+              "user": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -1478,6 +1548,9 @@
           "next_test_date": {
             "type": "string",
             "format": "date"
+          },
+          "profile": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"
