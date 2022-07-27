@@ -742,10 +742,6 @@
               "private"
             ]
           },
-          "private_password": {
-            "type": "string",
-            "format": "password"
-          },
           "status": {
             "type": "boolean"
           },
@@ -782,6 +778,9 @@
                 }
               }
             }
+          },
+          "event_password": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -847,10 +846,6 @@
               "private"
             ]
           },
-          "private_password": {
-            "type": "string",
-            "format": "password"
-          },
           "status": {
             "type": "boolean"
           },
@@ -859,6 +854,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "event_password": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

@@ -687,9 +687,6 @@
                   "private"
                 ]
               },
-              "private_password": {
-                "type": "string"
-              },
               "status": {
                 "type": "boolean"
               },
@@ -698,6 +695,9 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "event_password": {
+                "type": "string"
               },
               "published_at": {
                 "type": "string"
