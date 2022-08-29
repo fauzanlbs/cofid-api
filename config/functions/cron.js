@@ -18,4 +18,11 @@ module.exports = {
   // '0 1 * * 1': () => {
   //
   // }
+  '*/1 * * * *': async () => {
+    console.log('1 minute later');
+    const userExpired = await strapi.api.profile.services.profile.find({
+        pcr_date_gt: new Date(),
+      });
+    console.log('ini userExpirednya', userExpired);
+  },
 };
