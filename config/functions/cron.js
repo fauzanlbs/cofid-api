@@ -12,17 +12,36 @@
 
 module.exports = {
   /**
-   * Simple example.
    * Every monday at 1am.
    */
-  // '0 1 * * 1': () => {
-  //
-  // }
-  '*/1 * * * *': async () => {
-    console.log('1 minute later');
+  '0 1 * * 1': async () => {
+    let datenya = new Date();
+    
+    // find all expired user
     const userExpired = await strapi.api.profile.services.profile.find({
-        pcr_date_gt: new Date(),
-      });
-    console.log('ini userExpirednya', userExpired);
+      swab_date_null: false,
+      swab_date_gt: datenya.toISOString().substring(0,10)
+    });
+
+    // update swab test
+    await Promise.all(userExpired.map(item => {
+      let day = 0;
+
+      if (item.users_permissions_user?.risk_level == 'Very High') {
+        day = 7;
+      } else if (item.users_permissions_user?.risk_level == 'High') {
+        day = 14;
+      } else if (item.users_permissions_user?.risk_level == 'Medium') {
+        day = 28;
+      }
+      let newDate = new Date(item.swab_date);
+      newDate.setDate(datetest.getDate() + day);
+
+      return strapi.api.profile.services.profile.update(
+        { id: item.id },
+        { swab_date: newDate }
+      );
+
+    }));
   },
 };
