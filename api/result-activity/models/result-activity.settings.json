@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "result_activities",
+  "info": {
+    "name": "Result Activity"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "result": {
+      "model": "result"
+    },
+    "activity": {
+      "model": "activity"
+    },
+    "take_off_mask": {
+      "type": "boolean"
+    }
+  }
+}

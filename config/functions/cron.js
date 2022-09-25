@@ -15,16 +15,16 @@ module.exports = {
    * Every monday at 1am.
    */
   '0 1 * * 1': async () => {
-    let datenya = new Date();
+    let todayDate = new Date();
     
-    // find all expired user
-    const userExpired = await strapi.api.profile.services.profile.find({
+    // find all users that has expired test date
+    const usersExpired = await strapi.api.profile.services.profile.find({
       swab_date_null: false,
-      swab_date_gt: datenya.toISOString().substring(0,10)
+      swab_date_lt: todayDate.toISOString().substring(0,10)
     });
 
-    // update swab test
-    await Promise.all(userExpired.map(item => {
+    // update test date
+    await Promise.all(usersExpired.map(item => {
       let day = 0;
 
       if (item.users_permissions_user?.risk_level == 'Very High') {
