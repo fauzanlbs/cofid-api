@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "result_activities",
   "info": {
-    "name": "Result Activity"
+    "name": "Result Activity",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -19,6 +20,9 @@
     },
     "take_off_mask": {
       "type": "boolean"
+    },
+    "date": {
+      "type": "date"
     }
   }
 }

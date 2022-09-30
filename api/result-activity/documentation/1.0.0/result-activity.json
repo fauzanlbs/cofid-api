@@ -588,6 +588,10 @@
           "take_off_mask": {
             "type": "boolean"
           },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -604,6 +608,10 @@
           },
           "take_off_mask": {
             "type": "boolean"
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
           },
           "published_at": {
             "type": "string",
