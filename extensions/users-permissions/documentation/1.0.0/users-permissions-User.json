@@ -1472,6 +1472,12 @@
               "user": {
                 "type": "string"
               },
+              "certificate_image": {
+                "type": "string"
+              },
+              "result_test_image": {
+                "type": "string"
+              },
               "published_at": {
                 "type": "string"
               },
