@@ -45,10 +45,6 @@
     "swab_date": {
       "type": "date"
     },
-    "users_permissions_user": {
-      "plugin": "users-permissions",
-      "model": "user"
-    },
     "risk_level": {
       "model": "risk-level"
     },

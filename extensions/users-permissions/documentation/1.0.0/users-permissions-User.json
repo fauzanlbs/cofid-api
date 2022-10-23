@@ -1445,9 +1445,6 @@
               "swab_date": {
                 "type": "string"
               },
-              "users_permissions_user": {
-                "type": "string"
-              },
               "risk_level": {
                 "type": "string"
               },
