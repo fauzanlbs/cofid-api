@@ -9,7 +9,7 @@ module.exports = {
         const q3 = await strapi.query('result').findOne({ users_permissions_user: id, questioner: 3 });
         const q4 = await strapi.query('result').findOne({ users_permissions_user: id, questioner: 4 });
         const q5 = await strapi.query('result').findOne({ users_permissions_user: id, questioner: 5 });
-        const profile = await strapi.query('profile').findOne({ users_permissions_user: id });
+        const profile = await strapi.query('profile').findOne({ user: id });
 
         let total = q2.score ? q2.score : 0 + q3.score ? q3.score : 0 + q4.score ? q4.score : 0 + q5.score ? q5.score : 0;
 
