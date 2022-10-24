@@ -1475,6 +1475,9 @@
               "result_test_image": {
                 "type": "string"
               },
+              "certificate2_image": {
+                "type": "string"
+              },
               "published_at": {
                 "type": "string"
               },

@@ -94,6 +94,18 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "certificate2_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }
