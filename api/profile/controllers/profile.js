@@ -17,6 +17,15 @@ module.exports = {
         let color_risk = 'green';
 
         if (profile) {
+
+            //insert total to user
+
+            strapi.query('profile').update(
+                { user: id },
+                {
+                    total_score: total,
+                });
+
             //if non honest, total will * 1.2
             if (profile.non_honest) {
                 total = total * 1.2;
