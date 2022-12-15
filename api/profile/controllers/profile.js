@@ -10,9 +10,22 @@ module.exports = {
         const q4 = await strapi.query('result').findOne({ users_permissions_user: id, questioner: 4 });
         const q5 = await strapi.query('result').findOne({ users_permissions_user: id, questioner: 5 });
         const profile = await strapi.query('profile').findOne({ user: id });
-
-        let total = q2.score ? q2.score : 0 + q3.score ? q3.score : 0 + q4.score ? q4.score : 0 + q5.score ? q5.score : 0;
-
+        // console.log(q2.score,q3.score,q4.score);
+        let total = 0;
+        if(q2 && q2.score != null && q2.score > 0){
+            total = total + q2.score;
+        }
+        if(q3 && q3.score != null && q3.score > 0){
+            total = total + q3.score;
+        }
+        if(q4 && q4.score != null && q4.score > 0){
+            total = total + q4.score;
+        }
+        if(q5 && q5.score != null && q5.score > 0){
+            total = total + q5.score;
+        }
+        // = q2.score ? q2.score : 0 + q3.score ? q3.score : 0 + q4.score ? q4.score : 0 + q5.score ? q5.score : 0;
+        // return total;
         //default color is green
         let color_risk = 'green';
 
@@ -21,11 +34,10 @@ module.exports = {
             //insert total to user
 
             strapi.query('profile').update(
-                { user: id },
+                { id: id },
                 {
                     total_score: total,
                 });
-
             //if non honest, total will * 1.2
             if (profile.non_honest) {
                 total = total * 1.2;
