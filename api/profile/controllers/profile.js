@@ -24,6 +24,7 @@ module.exports = {
         if(q5 && q5.score != null && q5.score > 0){
             total = total + q5.score;
         }
+       
         // = q2.score ? q2.score : 0 + q3.score ? q3.score : 0 + q4.score ? q4.score : 0 + q5.score ? q5.score : 0;
         // return total;
         //default color is green
@@ -32,12 +33,17 @@ module.exports = {
         if (profile) {
 
             //insert total to user
+            
+            // entity = await strapi.services.profile.update({ user: id }, {
+            //     total_score: total
+            // });
 
-            strapi.query('profile').update(
-                { id: id },
+            let entity = await strapi.query('profile').update(
+                { user: id },
                 {
                     total_score: total,
                 });
+            // return entity;
             //if non honest, total will * 1.2
             if (profile.non_honest) {
                 total = total * 1.2;
