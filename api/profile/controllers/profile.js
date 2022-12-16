@@ -38,16 +38,18 @@ module.exports = {
             //     total_score: total
             // });
 
-            let entity = await strapi.query('profile').update(
-                { user: id },
-                {
-                    total_score: total,
-                });
+           
             // return entity;
             //if non honest, total will * 1.2
             if (profile.non_honest) {
                 total = total * 1.2;
             }
+
+            await strapi.query('profile').update(
+                { user: id },
+                {
+                    total_score: total,
+                });
 
             //if have red zone status, will got red
             if (profile.red_zone == true) {
