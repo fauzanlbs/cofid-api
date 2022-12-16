@@ -706,7 +706,7 @@
             }
           },
           "total_score": {
-            "type": "integer"
+            "type": "number"
           },
           "consequence": {
             "type": "integer"
@@ -1005,6 +1005,9 @@
               }
             }
           },
+          "positive": {
+            "type": "boolean"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -1040,7 +1043,7 @@
             "type": "string"
           },
           "total_score": {
-            "type": "integer"
+            "type": "number"
           },
           "consequence": {
             "type": "integer"
@@ -1059,6 +1062,9 @@
           },
           "user": {
             "type": "string"
+          },
+          "positive": {
+            "type": "boolean"
           },
           "published_at": {
             "type": "string",

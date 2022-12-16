@@ -1449,7 +1449,7 @@
                 "type": "string"
               },
               "total_score": {
-                "type": "integer"
+                "type": "number"
               },
               "consequence": {
                 "type": "integer"
@@ -1477,6 +1477,9 @@
               },
               "certificate2_image": {
                 "type": "string"
+              },
+              "positive": {
+                "type": "boolean"
               },
               "published_at": {
                 "type": "string"
