@@ -81,7 +81,9 @@ module.exports = {
                 color_risk = 'orange';
             } else if (profile.consequence > 15 && total >= 32) {
                 color_risk = 'orange';
-            } else if (profile.consequence > 15 && (profile.non_honest || profile.non_masker || profile.non_masker_social)
+            } 
+            
+            if (profile.consequence > 15 && (profile.non_honest || profile.non_masker || profile.non_masker_social)
             ) {
                 return 'red';
             }
@@ -95,7 +97,9 @@ module.exports = {
                 profile.consequence >= 8 && profile.consequence <= 15 && total >= 32
             ) {
                 color_risk = 'orange';
-            } else if (profile.consequence >= 8 && profile.consequence <= 15 && (profile.non_honest || profile.non_masker || profile.non_masker_social)
+            } 
+            
+            if (profile.consequence >= 8 && profile.consequence <= 15 && (profile.non_honest || profile.non_masker || profile.non_masker_social)
             ) {
                 return 'red';
             }
@@ -108,7 +112,9 @@ module.exports = {
             } else if (profile.consequence >= 1 && profile.consequence <= 7 && total >= 32
             ) {
                 color_risk = 'yellow';
-            } else if (profile.consequence >= 1 && profile.consequence <= 7 && (profile.non_honest || profile.non_masker || profile.non_masker_social)
+            } 
+            
+            if (profile.consequence >= 1 && profile.consequence <= 7 && (profile.non_honest || profile.non_masker || profile.non_masker_social)
             ) {
                 color_risk = 'orange';
             }
