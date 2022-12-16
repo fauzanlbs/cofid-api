@@ -94,13 +94,13 @@ module.exports = {
                 color_risk = 'orange';
             }
 
-            if ((profile.consequence == 0 || profile.consequence == null) && total < 22) {
+            if ((profile.consequence == 0 || profile.consequence == null || profile.consequence == '') && total < 22) {
                 color_risk = 'green';
-            } else if ((profile.consequence == 0 || profile.consequence == null) && total >= 22 && total <= 32) {
+            } else if ((profile.consequence == 0 || profile.consequence == null || profile.consequence == '') && total >= 22 && total <= 32) {
                 color_risk = 'green';
-            } else if ((profile.consequence == 0 || profile.consequence == null) && total >= 32) {
+            } else if ((profile.consequence == 0 || profile.consequence == null || profile.consequence == '') && total >= 32) {
                 color_risk = 'green';
-            } else if ((profile.consequence == 0 || profile.consequence == null) && (profile.non_honest || profile.non_masker || profile.non_masker_social)
+            } else if ((profile.consequence == 0 || profile.consequence == null || profile.consequence == '') && (profile.non_honest || profile.non_masker || profile.non_masker_social)
             ) {
                 color_risk = 'yellow';
             }
