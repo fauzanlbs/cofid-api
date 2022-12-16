@@ -119,7 +119,9 @@ module.exports = {
                 color_risk = 'green';
             } else if ((profile.consequence == 0 || profile.consequence == null || profile.consequence == '') && total >= 32) {
                 color_risk = 'green';
-            } else if ((profile.consequence == 0 || profile.consequence == null || profile.consequence == '') && (profile.non_honest || profile.non_masker || profile.non_masker_social)
+            } 
+            
+            if ((profile.consequence == 0 || profile.consequence == null || profile.consequence == '') && (profile.non_honest || profile.non_masker || profile.non_masker_social)
             ) {
                 color_risk = 'yellow';
             }
@@ -127,7 +129,7 @@ module.exports = {
             return color_risk;
         }
 
-        // return color_risk;
+        return color_risk;
     }
 
 };
