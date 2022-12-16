@@ -2,15 +2,15 @@
 const { sanitizeEntity } = require('strapi-utils');
 
 module.exports = {
-    async calculateRisk(ctx) {
+    
 
+    async getTotal(ctx){
         const id = ctx.params.id;
         const q2 = await strapi.query('result').findOne({ users_permissions_user: id, questioner: 2 });
         const q3 = await strapi.query('result').findOne({ users_permissions_user: id, questioner: 3 });
         const q4 = await strapi.query('result').findOne({ users_permissions_user: id, questioner: 4 });
         const q5 = await strapi.query('result').findOne({ users_permissions_user: id, questioner: 5 });
-        const profile = await strapi.query('profile').findOne({ user: id });
-        // console.log(q2.score,q3.score,q4.score);
+        
         let total = 0;
         if(q2 && q2.score != null && q2.score > 0){
             total = total + q2.score;
@@ -24,6 +24,19 @@ module.exports = {
         if(q5 && q5.score != null && q5.score > 0){
             total = total + q5.score;
         }
+        console.log('masuk ke get total', total);
+        return total;
+    },
+
+    async calculateRisk(ctx) {
+
+        const id = ctx.params.id;
+        // const total = async () => {
+        //     return this.getTotal(ctx);
+        // }
+        let total = await this.getTotal(ctx);
+        const profile = await strapi.query('profile').findOne({ user: id });
+        console.log('belum masuk', total, profile)
        
         // = q2.score ? q2.score : 0 + q3.score ? q3.score : 0 + q4.score ? q4.score : 0 + q5.score ? q5.score : 0;
         // return total;
@@ -41,16 +54,20 @@ module.exports = {
            
             // return entity;
             //if non honest, total will * 1.2
+            console.log('ini non honest', profile.non_honest, total);
             if (profile.non_honest) {
+                
                 total = total * 1.2;
+                console.log('masuk non honest', total);
             }
 
-            await strapi.query('profile').update(
+            let entity = await strapi.query('profile').update(
                 { user: id },
                 {
                     total_score: total,
                 });
 
+            
             //if have red zone status, will got red
             if (profile.red_zone == true) {
                 return 'red';
@@ -110,7 +127,7 @@ module.exports = {
             return color_risk;
         }
 
-        return color_risk;
+        // return color_risk;
     }
 
 };
